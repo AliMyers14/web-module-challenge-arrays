@@ -46,10 +46,11 @@ Use the copy function below to do the following:
 */
 
 
-function copy(/*your code here*/){
-  /*your code here*/
+function copy(iceCream){
+  const originalFlavorsCopy = iceCream.slice()
+  return originalFlavorsCopy
 }
-
+console.log(copy(originalFlavors))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -63,9 +64,14 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
-  /*your code here*/
+function is31Flavors(iceCream){
+if (iceCream.length === 31){
+return true
+} else {
+  return false
+} 
  }
+console.log(is31Flavors(originalFlavors))
 
 
 
@@ -82,10 +88,11 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
-  /*your code here*/
+function addFlavor(iceCreamFlavors, newFlavor){
+  iceCreamFlavors.unshift(newFlavor)
+  return iceCreamFlavors
  }
-
+console.log(addFlavor(originalFlavors, "Rainbow Sherbert"))
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -100,10 +107,11 @@ Use the removeLastFlavor function below to do the following:
 */
 
 
-function removeLastFlavor(/*your code here*/){
- /*your code here*/
+function removeLastFlavor(only31){
+ only31.pop()
+ return only31
 }
-
+console.log(removeLastFlavor(originalFlavors))
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -118,9 +126,11 @@ Use the getFlavorByIndex function below to do the following:
 */
 
 
-function getFlavorByIndex(/*your code here*/){
-  /*your code here*/
+function getFlavorByIndex(getFlavors, indexNum){
+
+  return getFlavors[indexNum]
 }
+console.log(getFlavorByIndex(originalFlavors, 3))
 
 
 
@@ -138,11 +148,12 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-  /*your code here*/
+function removeFlavorByName(whichFlavor, flavorName){
+  const index = whichFlavor.indexOf(flavorName)
+  whichFlavor.splice(index, 1)
+  return whichFlavor
 }
-
-
+console.log(removeFlavorByName(originalFlavors, "Burgundy Cherry"))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. 
@@ -163,9 +174,8 @@ Use the filterByWord function below to do the following:
 */
 
 
-function filterByWord(/*your code here*/){
-  /*your code here*/
-}
+function filterByWord(/*your code here*/){}
+
 
 
 
